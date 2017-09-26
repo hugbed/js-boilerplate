@@ -1,0 +1,25 @@
+{
+  "name": "js-boilerplate",
+  "version": "1.0.0",
+  "description": "JavaScript Boilerplate Stack",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "node ./test/runTests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugbed/js-boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "React",
+    "Redux",
+    "Electron"
+  ],
+  "author": "Hugo Bedard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugbed/js-boilerplate/issues"
+  },
+  "homepage": "https://github.com/hugbed/js-boilerplate#readme"
+}
