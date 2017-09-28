@@ -23,15 +23,20 @@
     "npm": ">=8.5.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production electron ./app/main.dev",
-    "start-dev": "NODE_ENV=development electron ./app/main.dev",
-    "build": "./node_modules/.bin/webpack --config ./webpack.config.js"
+    "start": "NODE_ENV=production electron -r babel-register ./app/main.dev",
+    "start-dev": "NODE_ENV=development electron -r babel-register ./app/main.dev",
+    "build": "./node_modules/.bin/webpack --config ./webpack.config.js",
+    "watch": "./node_modules/.bin/webpack --config ./webpack.config.js --watch"
   },
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "webpack": "^3.6.0"
   }
 }

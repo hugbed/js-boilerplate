@@ -1,9 +1,9 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-window.onload = function(){
+window.onload = () => {
   ReactDOM.render(
-    React.createElement('div', null, 'World!'),
+    <div>World!</div>,
     document.getElementById('root')
   );
 }
