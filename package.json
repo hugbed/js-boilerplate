@@ -2,24 +2,36 @@
   "name": "js-boilerplate",
   "version": "1.0.0",
   "description": "JavaScript Boilerplate Stack",
-  "main": "app/index.js",
-  "scripts": {
-    "test": "node ./test/runTests.js"
-  },
+  "author": "Hugo Bedard",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hugbed/js-boilerplate.git"
   },
+  "bugs": {
+    "url": "https://github.com/hugbed/js-boilerplate/issues"
+  },
+  "homepage": "https://github.com/hugbed/js-boilerplate#readme",
   "keywords": [
     "boilerplate",
     "React",
     "Redux",
-    "Electron"
+    "Electron",
+    "webpack"
   ],
-  "author": "Hugo Bedard",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hugbed/js-boilerplate/issues"
+  "engines": {
+    "npm": ">=8.5.0"
   },
-  "homepage": "https://github.com/hugbed/js-boilerplate#readme"
+  "scripts": {
+    "start": "NODE_ENV=production electron ./app/main.dev",
+    "start-dev": "NODE_ENV=development electron ./app/main.dev",
+    "build": "./node_modules/.bin/webpack --config ./webpack.config.js"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  }
 }
