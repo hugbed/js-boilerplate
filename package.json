@@ -26,19 +26,25 @@
     "start": "NODE_ENV=production electron -r babel-register ./app/main.dev",
     "start-dev": "NODE_ENV=development electron -r babel-register ./app/main.dev",
     "build": "./node_modules/.bin/webpack --config ./webpack.config.js",
-    "watch": "./node_modules/.bin/webpack --config ./webpack.config.js --watch"
+    "watch": "./node_modules/.bin/webpack --config ./webpack.config.js --watch",
+    "flow": "./node_modules/.bin/flow",
+    "flow-typed": "rimraf flow-typed/npm && flow-typed install --overwrite || true"
   },
   "dependencies": {
+    "flow-runtime": "^0.14.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-flow-runtime": "^0.11.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "electron-devtools-installer": "^2.2.0",
+    "flow-bin": "^0.55.0",
+    "flow-typed": "^2.1.5",
     "webpack": "^3.6.0"
   }
 }

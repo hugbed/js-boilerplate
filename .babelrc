@@ -1,6 +1,10 @@
 {
   "presets": ["env", "react"],
   "plugins": [
-    "transform-class-properties"
+    "transform-class-properties",
+    ["flow-runtime", {
+      "assert": true,
+      "annotate": true
+    }]
   ]
 }
