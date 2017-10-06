@@ -3,27 +3,12 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
-type Props = {
-  text: string;
-};
-class Button extends React.Component<Props> {
-  // example of babel plugin transform-class-properties
-  handleClick = () => {
-    console.log("Clicked!");
-  };
-
-  render() {
-    return(
-      <button onClick={this.handleClick}>{this.props.text}</button>
-    );
-  }
-}
+import Timer from './components/Timer';
 
 window.onload = () => {
   ReactDOM.render(
     <div>
-      <div>World!</div>
-      <Button text="Click me!"/>
+      <Timer hours={3} minutes={0} seconds={23} />
     </div>,
     document.getElementById('root')
   );
